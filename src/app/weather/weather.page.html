@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Hey Vit !</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content >
+      <ion-card *ngIf="Myweather">
+          <ion-card-header>
+              <ion-card-title>Weather in {{Myweather.name}}</ion-card-title>
+          </ion-card-header>
+          <ion-img src="http://openweathermap.org/img/w/{{Myweather.weather[0].icon}}.png" style="width:100px;height:100px;"></ion-img>
+          <ion-card-content>
+              <h1>{{Myweather.main.temp}}°C</h1>
+              <h2>{{Myweather.weather[0].main}} - {{Myweather.weather[0].description}}</h2>
+              <p>Humidity {{Myweather.main.humidity}} %</p>
+              <p>Pressure {{Myweather.main.pressure}} hpa</p>
+              <p>Wind Speed {{Myweather.wind.speed}} m/s</p>
+          </ion-card-content>
+      </ion-card>
+  
+
+  </ion-content>
+  
+  

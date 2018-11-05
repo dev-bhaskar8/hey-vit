@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Hey Vit !</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let article of news?.articles" (click)="open(article)">
+    <ion-img [src]="article.urlToImage"></ion-img>
+    <ion-card-header>
+        <ion-card-title>{{article.title}}</ion-card-title>
+    </ion-card-header>
+</ion-card>
+<ion-infinite-scroll>
+    <ion-infinite-scroll-content loadingSpinner="bubble" loadingText="waiting in SJT lift..."></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
